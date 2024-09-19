@@ -17,38 +17,20 @@ This project implements a deep learning model to detect COVID-19 from chest X-ra
 
 ## Prerequisites
 
-- Python 3.7+
-- TensorFlow 2.x
-- Flask
-- OpenCV
-- NumPy
-- Pillow
-
-## Installation
-
-1. Clone the repository:
-   ```
-   git clone https://github.com/yourusername/covid-detection.git
-   cd covid-detection
-   ```
-
-2. Install the required packages:
-   ```
-   pip install -r requirements.txt
-   ```
+- Docker
 
 ## Usage
 
-### Running the Web Application
+### Running the Web Application using Docker
 
-1. Ensure you have Flask installed:
+1. Pull the Docker image:
    ```
-   pip install flask
+   docker pull pouryare/covid-detection-app:latest
    ```
 
-2. Run the Flask app:
+2. Run the Docker container:
    ```
-   python app.py
+   docker run -d -p 5000:5000 --name covid-app pouryare/covid-detection-app:latest
    ```
 
 3. Open a web browser and go to `http://localhost:5000` to use the prediction interface.
@@ -61,31 +43,15 @@ This project implements a deep learning model to detect COVID-19 from chest X-ra
 
 ## Model Architecture
 
-The project uses a Convolutional Neural Network (CNN) for COVID-19 detection. The exact architecture details can be found in the `model.py` file.
+The project uses a Convolutional Neural Network (CNN) for COVID-19 detection. The exact architecture details are encapsulated within the Docker image.
 
 ## Performance
 
-The model's performance metrics, such as accuracy, precision, recall, and F1-score, should be added here once they are available from your training and evaluation process.
-
-## Docker Support
-
-This project includes Docker support for easy deployment. To use the Docker container:
-
-1. Build the Docker image:
-   ```
-   docker build -t covid-detection-app .
-   ```
-
-2. Run the Docker container:
-   ```
-   docker run -p 5000:5000 -v /path/to/models:/models covid-detection-app
-   ```
-
-Replace `/path/to/models` with the actual path to your model files on the host machine.
+The model's performance metrics, such as accuracy, precision, recall, and F1-score, are specific to the trained model included in the Docker image.
 
 ## Contributing
 
-Contributions to this project are welcome! Please fork the repository and submit a pull request with your proposed changes.
+Contributions to this project are welcome! Please fork the repository from [https://github.com/pouryare/covid-detection](https://github.com/pouryare/covid-detection) and submit a pull request with your proposed changes.
 
 ## License
 
