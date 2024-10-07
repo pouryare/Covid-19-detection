@@ -56,7 +56,7 @@ For those interested in contributing or further developing the project:
 
 1. Clone the repository:
    ```
-   git clone https://github.com/pouryare/covid-detection.git
+   git clone https://github.com/pouryare/Covid-19-detection.git
    ```
 
 2. Install the required dependencies (consider using a virtual environment):
